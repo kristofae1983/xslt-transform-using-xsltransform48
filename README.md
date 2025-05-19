@@ -48,6 +48,10 @@ The transformed output will be saved as `[originalname]_transformed.xml` in the 
 
 ## Release Notes
 
+### 0.0.4
+
+-icon added 
+
 ### 0.0.3
 
 -license added 
