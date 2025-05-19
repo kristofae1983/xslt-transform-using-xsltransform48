@@ -1,0 +1,85 @@
+## VS Code Extension ##
+.vscode/
+.vscode-test/
+out/
+dist/
+node_modules/
+*.vsix
+[Pp]ublish/
+src/
+__azurite*
+__blobstorage*
+.vscode*
+
+
+## .NET ##
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.nupkg
+*.swp
+*.cache
+*.dotCover
+*.pidb
+*.log
+*.sln.cache
+*.csproj.user
+*.csproj.AssemblyReference.cache
+packages/
+TestResults/
+[Tt]emp/
+[Dd]ebug/
+[Rr]elease/
+**/Properties/launchSettings.json
+
+## Build results ##
+[Dd]ebugPublic/
+[Rr]eleasePublic/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+
+## NuGet Packages ##
+*.nupkg
+.nuget/
+NuGet.exe
+nuget.exe
+
+## User-specific files ##
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results ##
+[Bb]in/
+[Oo]bj/
+
+## VS Code ##
+.history/
+*.code-workspace
+
+## OS generated files ##
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+## Tests ##
+test-results/
+coverage/
+*.coverage
+*.coverage.xml
