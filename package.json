@@ -3,7 +3,8 @@
   "displayName": "xslt-transform-using-xsltransform48",
   "description": "Execute a parameterized xsl using xsltransform48 supporting XSLT 1.0 including C# scripts",
   "publisher": "kristofaerts",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.98.0"
   },
@@ -87,5 +88,15 @@
     "untrustedWorkspaces": {
       "supported": true
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kristofae1983/xslt-transform-using-xsltransform48.git",
+    "directory": "path/to/extension/root" 
+  },
+  "bugs": {
+    "url": "https://github.com/kristofae1983/xslt-transform-using-xsltransform48/issues"
+  },
+  "homepage": "https://github.com/kristofae1983/xslt-transform-using-xsltransform48#readme"
 }
+

@@ -48,7 +48,11 @@ The transformed output will be saved as `[originalname]_transformed.xml` in the 
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.3
+
+-license added 
+
+### 0.0.2
 
 Initial release featuring:
 - Basic XSLT 1.0 transformation capabilities
