@@ -3,7 +3,7 @@
   "displayName": "xslt-transform-using-xsltransform48",
   "description": "Execute a parameterized xsl using xsltransform48 supporting XSLT 1.0 including C# scripts",
   "publisher": "kristofaerts",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.98.0"
@@ -12,8 +12,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:xslt-transform.transform",
-    "onCommand:xslt-transform.transformFromXslt",
+        
     "onLanguage:xml",
     "onLanguage:xsl"
 ],

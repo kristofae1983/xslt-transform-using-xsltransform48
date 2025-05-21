@@ -47,8 +47,11 @@ The transformed output will be saved as `[originalname]_transformed.xml` in the 
 - Error line numbers may sometimes be slightly off
 
 ## Release Notes
+### 0.0.6
 
-### 0.0.4
+-fixed parameter support
+
+### 0.0.5
 
 -icon added 
 

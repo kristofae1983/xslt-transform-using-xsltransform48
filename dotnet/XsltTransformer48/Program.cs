@@ -4,7 +4,6 @@ using System.Xml;
 using System.Xml.Xsl;
 using System.Security;
 using System.Security.Policy;
-using System.Security.Permissions;
 
 class Program
 {
@@ -20,19 +19,21 @@ class Program
         string xmlPath = Path.GetFullPath(args[0]);
         string xsltPath = Path.GetFullPath(args[1]);
         string outputPath = Path.GetFullPath(args[2]);
-/*
-        // Create permission sets
-        FileIOPermission readPermission = new FileIOPermission(FileIOPermissionAccess.Read, new string[] { xmlPath, xsltPath });
-        FileIOPermission writePermission = new FileIOPermission(FileIOPermissionAccess.Write, outputPath);
 
-        // Use PermissionSet to combine permissions
-        PermissionSet permissions = new PermissionSet(PermissionState.None);
-        permissions.AddPermission(readPermission);
-        permissions.AddPermission(writePermission);
+        // Parse parameters: expect pairs of name and value after the first three arguments
+        XsltArgumentList xsltArgs = new XsltArgumentList();
+        for (int i = 3; i < args.Length; i++)
+        {
+            var param = args[i];
+            var eqIdx = param.IndexOf('=');
+            if (eqIdx > 0)
+            {
+                string paramName = param.Substring(0, eqIdx);
+                string paramValue = param.Substring(eqIdx + 1);
+                xsltArgs.AddParam(paramName, string.Empty, paramValue);
+            }
+        }
 
-        // Assert all permissions at once
-        permissions.Assert();
-*/
         try
         {
             // Configure XSLT settings with script support
@@ -65,7 +66,7 @@ class Program
 
             using (XmlWriter writer = XmlWriter.Create(outputPath, writerSettings))
             {
-                xslt.Transform(xmlPath, writer);
+                xslt.Transform(xmlPath, xsltArgs, writer);
             }
 
             Console.WriteLine("Transformation successful!");
@@ -85,11 +86,6 @@ class Program
         {
             Console.Error.WriteLine($"ERROR: {ex.GetType().Name}: {ex.Message}");
             return 1;
-        }
-        finally
-        {
-            // Always revert the assertion when done
-            CodeAccessPermission.RevertAssert();
         }
     }
 }

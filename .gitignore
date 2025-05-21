@@ -6,7 +6,7 @@ dist/
 node_modules/
 *.vsix
 [Pp]ublish/
-src/
+src/test/
 __azurite*
 __blobstorage*
 .vscode*
